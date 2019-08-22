@@ -3,6 +3,22 @@ package search;
 import datastructure.Queue;
 
 public class BST<Key extends Comparable<Key>,Value> {
+    public static void main(String[] args) {
+        BST bst = new BST();
+        bst.put("a",1);
+        bst.put("b",2);
+        bst.put("c",3);
+        bst.put("h",4);
+        bst.put("g",5);
+        bst.put("e",6);
+        bst.put("d",7);
+        bst.put("f",8);
+
+        System.out.println(bst.rank("g"));
+        System.out.println(bst.select(6));
+        System.out.println(bst.keys().iterator());
+    }
+
     private Node root;
 
     private class Node{
@@ -207,8 +223,9 @@ public class BST<Key extends Comparable<Key>,Value> {
             queue.enqueue(x.key);
         if(cmphi > 0)
             keys(x.right,queue,lo,hi);
+
     }
 
-    
+
 
 }
