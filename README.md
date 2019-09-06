@@ -1,2 +1,2 @@
 # Algorithms
-use for algorithms test
+using for algorithms test
